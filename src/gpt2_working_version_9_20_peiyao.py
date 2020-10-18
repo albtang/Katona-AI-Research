@@ -161,6 +161,6 @@ def process_responses(all_text,keywords):
 
 small_dataset = process_responses(generate_responses("The car brand ","",["BMW","Mercedes-Benz","Ford","Hyundai","Kia","Ram","Subaru","Jeep","Toyota","Chevrolet","Honda","Audi", "Lexus","Tesla","GMC"],20,"345M"), ["BMW","Mercedes-Benz","Ford","Hyundai","Kia","Ram","Subaru","Jeep","Toyota","Chevrolet","Honda","Audi", "Lexus","Tesla","GMC"])
 df = pd.DataFrame(small_dataset)
-df.to_csv('10/17 small dataset')
+df.to_csv('Oct 17 small dataset')
 
 
