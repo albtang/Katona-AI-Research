@@ -1,0 +1,16 @@
+,Unnamed: 0,The car brand BMW,The car brand Mercedes-Benz,The car brand Ford,The car brand Hyundai,The car brand Kia,The car brand Ram,The car brand Subaru,The car brand Jeep,The car brand Toyota,The car brand Chevrolet,The car brand Honda,The car brand Audi,The car brand Lexus,The car brand Tesla,The car brand GMC
+0,BMW,96,2,7,4,2,4,4,1,2,2,3,14,5,4,4
+1,Mercedes-Benz,3,90,4,3,1,10,2,1,2,3,2,8,9,3,3
+2,Ford,1,1,105,4,7,6,3,4,5,7,4,4,2,6,9
+3,Hyundai,0,0,1,92,5,1,1,0,0,1,1,2,0,0,0
+4,Kia,0,1,0,20,104,0,0,1,1,1,1,0,0,0,0
+5,Ram,0,0,0,0,0,91,0,0,0,0,0,0,0,0,0
+6,Subaru,1,0,0,0,0,0,108,1,0,0,0,1,2,0,0
+7,Jeep,0,0,0,0,0,0,0,94,0,2,0,0,1,0,0
+8,Toyota,0,2,5,6,1,2,8,5,101,5,5,3,16,2,2
+9,Chevrolet,1,0,0,2,2,1,1,2,1,82,0,0,1,0,57
+10,Honda,0,0,1,4,1,1,4,0,3,2,101,2,2,0,0
+11,Audi,3,0,3,1,2,1,2,0,3,2,0,101,4,2,1
+12,Lexus,0,0,0,0,0,1,0,0,5,1,0,0,97,0,0
+13,Tesla,2,1,5,4,5,0,0,0,7,11,3,4,0,112,10
+14,GMC,0,0,0,0,0,0,0,0,0,2,0,0,0,0,51
