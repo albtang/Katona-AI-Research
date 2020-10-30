@@ -164,6 +164,6 @@ small_dataset = process_responses(generate_responses("The car brand ","",["BMW",
 #car_brand_results_baseline_df=pd.DataFrame(car_brand_baseline)
 #car_brand_results_baseline_df.to_csv("Oct 24 car brand baseline5.csv")
 df = pd.DataFrame(small_dataset)
-df.to_csv('Oct 27 small dataset 60 6.csv')
+df.to_csv('data/Oct 28 small dataset 60 10.csv')
 
 
