@@ -159,11 +159,11 @@ def process_responses(all_text,keywords):
         frqs[tmp]=frq
     return frqs
 
-small_dataset = process_responses(generate_responses("The car brand ","",["BMW","Mercedes-Benz","Ford","Hyundai","Kia","Ram","Subaru","Jeep","Toyota","Chevrolet","Honda","Audi", "Lexus","Tesla","GMC"],60,"345M"), ["BMW","Mercedes-Benz","Ford","Hyundai","Kia","Ram","Subaru","Jeep","Toyota","Chevrolet","Honda","Audi", "Lexus","Tesla","GMC"])
+small_dataset = process_responses(generate_responses("The car brand ","",["BMW","Mercedes-Benz","Ford","Hyundai","Kia","Ram","Subaru","Jeep","Toyota","Chevrolet","Honda","Audi", "Lexus","Tesla","GMC"],70,"345M"), ["BMW","Mercedes-Benz","Ford","Hyundai","Kia","Ram","Subaru","Jeep","Toyota","Chevrolet","Honda","Audi", "Lexus","Tesla","GMC"])
 #car_brand_baseline=process_responses(generate_responses("The car brand is similar to","",[""],500,"345M"), ["BMW","Mercedes-Benz","Ford","Hyundai","Kia","Ram","Subaru","Jeep","Toyota","Chevrolet","Honda","Audi","Lexus","Tesla","GMC"])
 #car_brand_results_baseline_df=pd.DataFrame(car_brand_baseline)
 #car_brand_results_baseline_df.to_csv("Oct 24 car brand baseline5.csv")
 df = pd.DataFrame(small_dataset)
-df.to_csv('data/Oct 28 small dataset 60 10.csv')
+df.to_csv('data/Oct 30 small dataset 70 10.csv')
 
 
