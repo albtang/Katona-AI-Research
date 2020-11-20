@@ -149,7 +149,7 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 )
 
 def process_responses(all_text,keywords):
-    with open('data/Nov 19 raw text 5.csv', 'w+') as f:
+    with open('data/Nov 20 raw text 5.csv', 'w+') as f:
         f.write(all_test)
     frqs={}
     for text_list in all_text:
@@ -162,35 +162,35 @@ def process_responses(all_text,keywords):
         frqs[tmp]=frq
     return frqs
 
-aliases = [['Jeep', 'Fiat', 'Chrysler'],
-        ['Subaru', 'Bugeye', 'Scooby'],
-        ['Dodge', 'Polara'],
+aliases = [['Jeep', ' Fiat', ' Chrysler'],
+        ['Subaru', ' Bugeye', ' Scooby'],
+        ['Dodge', ' Polara'],
         ['GMC'],
         ['Tesla'],
         ['Buick'],
-        ['Toyota', 'Yota', 'Camry'],
-        ['Honda', 'Accord'],
-        ['Nissan', 'Infiniti'],
-        ['Chevrolet', 'Chevy'],
-        ['Hyundai', 'Tiburon', 'HYU', 'Kia'],
+        ['Toyota', ' Yota', ' Camry'],
+        ['Honda', ' Accord'],
+        ['Nissan', ' Infiniti'],
+        ['Chevrolet', ' Chevy'],
+        ['Hyundai', ' Tiburon', ' HYU', ' Kia'],
         ['Ram'],
-        ['Mazda', 'Matsuda'],
-        ['Renault', 'Dacia'],
-        ['Lamborghini', 'Lambo', 'Aventadora', 'Lamborgini'],
-        ['Mercedes-Benz', 'Merc', 'Benz', 'Mercedes'],
-        ['BMW', 'Beemer', 'Bimmer', 'Beamer'],
-        ['Ford', 'Thunderbird', 'Mustang'],
-        ['Porsche', 'Porche', 'Porce'],
-        ['Audi', '4 Rings'],
-        ['Volkswagen', 'VW', 'Volkswagon'],
-        ['Ferrari', 'Prancing Horse', 'Scuderia'],
-        ['MG', 'M.G.', 'Morris Garages', 'M.G. Car Company'],
-        ['Lexus', 'Lex', 'GX', 'ES 250'],
+        ['Mazda', ' Matsuda'],
+        ['Renault', ' Dacia'],
+        ['Lamborghini', ' Lambo', ' Aventadora', ' Lamborgini'],
+        ['Mercedes-Benz', ' Merc', ' Benz', ' Mercedes'],
+        ['BMW', ' Beemer', ' Bimmer', ' Beamer'],
+        ['Ford', ' Thunderbird', ' Mustang'],
+        ['Porsche', ' Porche', ' Porce'],
+        ['Audi', ' 4 Rings'],
+        ['Volkswagen', ' VW', ' Volkswagon'],
+        ['Ferrari', ' Prancing Horse', ' Scuderia'],
+        ['MG', ' M.G.', ' Morris Garages', ' M.G. Car Company'],
+        ['Lexus', ' Lex', ' GX', ' ES 250'],
         ['Infiniti'],
         ['Volvo']]
 
-small_dataset = process_responses(generate_responses("The car brand ","",[""],500,"345M"), aliases)
+small_dataset = process_responses(generate_responses("The car brand ","is similar to",[""],500,"345M"), aliases)
 df = pd.DataFrame(small_dataset)
-df.to_csv('data/Nov 19 baseline 500 5.csv')
+df.to_csv('data/Nov 20 baseline 500 5.csv')
 
 
