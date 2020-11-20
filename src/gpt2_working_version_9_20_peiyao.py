@@ -149,7 +149,7 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 )
 
 def process_responses(all_text,keywords):
-    with open('data/Nov 19 raw text 1.csv', 'w+') as f:
+    with open('data/Nov 19 raw text 5.csv', 'w+') as f:
         f.write(all_test)
     frqs={}
     for text_list in all_text:
@@ -189,8 +189,8 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Infiniti'],
         ['Volvo']]
 
-small_dataset = process_responses(generate_responses("The car brand ","",[i[0] for i in aliases],100,"345M"), aliases)
+small_dataset = process_responses(generate_responses("The car brand ","",[""],500,"345M"), aliases)
 df = pd.DataFrame(small_dataset)
-df.to_csv('data/Nov 19 sim 100 1.csv')
+df.to_csv('data/Nov 19 baseline 500 5.csv')
 
 
