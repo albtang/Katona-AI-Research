@@ -5,6 +5,7 @@ import tensorflow as tf
 import model, sample, encoder
 import pandas as pd
 from collections import defaultdict
+import re
 
 #interactive mode: input prompt and test out the AI.
 #non-interactive mode: use a list of prompts to generate a large number of responses to each prompt.
@@ -151,7 +152,7 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 
 def process_responses(all_text,keywords):
     raw_text = pd.DataFrame(all_text)
-    raw_text.to_csv('data/Nov 21 raw text test 1.csv')
+    raw_text.to_csv('data/raw_text/b Nov21 500 5.csv')
     frqs={}
     for text_list in all_text:
         tmp=text_list
@@ -159,39 +160,40 @@ def process_responses(all_text,keywords):
         text_list=all_text[text_list]
         for words in keywords:
             for word in words:
-                frq[words[0]]+=len([text for text in text_list if word in text])
+                regex_string = '[^A-z]' + word + '[^A-z]'
+                frq[words[0]]+=len([text for text in text_list if re.findall(regex_string, text)])
         frqs[tmp]=frq
     return frqs
 
-aliases = [['Jeep', ' Fiat', ' Chrysler'],
-        ['Subaru', ' Bugeye', ' Scooby'],
-        ['Dodge', ' Polara'],
+aliases = [['Jeep', 'Fiat', 'Chrysler'],
+        ['Subaru', 'Bugeye', 'Scooby'],
+        ['Dodge', 'Polara'],
         ['GMC'],
         ['Tesla'],
         ['Buick'],
-        ['Toyota', ' Yota', ' Camry'],
-        ['Honda', ' Accord'],
-        ['Nissan', ' Infiniti'],
-        ['Chevrolet', ' Chevy'],
-        ['Hyundai', ' Tiburon', ' HYU', ' Kia'],
+        ['Toyota', 'Yota', 'Camry'],
+        ['Honda', 'Accord'],
+        ['Nissan', 'Infiniti'],
+        ['Chevrolet', 'Chevy'],
+        ['Hyundai', 'Tiburon', 'HYU', 'Kia'],
         ['Ram'],
-        ['Mazda', ' Matsuda'],
-        ['Renault', ' Dacia'],
-        ['Lamborghini', ' Lambo', ' Aventadora', ' Lamborgini'],
-        ['Mercedes-Benz', ' Merc', ' Benz', ' Mercedes'],
-        ['BMW', ' Beemer', ' Bimmer', ' Beamer'],
-        ['Ford', ' Thunderbird', ' Mustang'],
-        ['Porsche', ' Porche', ' Porce'],
-        ['Audi', ' 4 Rings'],
-        ['Volkswagen', ' VW', ' Volkswagon'],
-        ['Ferrari', ' Prancing Horse', ' Scuderia'],
-        ['MG', ' M.G.', ' Morris Garages', ' M.G. Car Company'],
-        ['Lexus', ' Lex', ' GX', ' ES 250'],
+        ['Mazda', 'Matsuda'],
+        ['Renault', 'Dacia'],
+        ['Lamborghini', 'Lambo', 'Aventadora', 'Lamborgini'],
+        ['Mercedes-Benz', 'Merc', 'Benz', 'Mercedes'],
+        ['BMW', 'Beemer', 'Bimmer', 'Beamer'],
+        ['Ford', 'Thunderbird', 'Mustang'],
+        ['Porsche', 'Porche', 'Porce'],
+        ['Audi', '4 Rings'],
+        ['Volkswagen', 'VW', 'Volkswagon'],
+        ['Ferrari', 'Prancing Horse', 'Scuderia'],
+        ['MG', 'M.G.', 'Morris Garages', 'M.G. Car Company'],
+        ['Lexus', 'Lex', 'GX', 'ES 250'],
         ['Infiniti'],
         ['Volvo']]
 
-small_dataset = process_responses(generate_responses("The car brand ","is similar to",[""],1,"345M"), aliases)
+small_dataset = process_responses(generate_responses("The car brand ","is similar to",[""],500,"345M"), aliases)
 df = pd.DataFrame(small_dataset)
-df.to_csv('data/Nov 20 test baseline 1 1.csv')
+df.to_csv('data/freqs/b Nov21 500 5.csv')
 
 
