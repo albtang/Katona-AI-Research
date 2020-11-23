@@ -152,7 +152,7 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 
 def process_responses(all_text,keywords):
     raw_text = pd.DataFrame(all_text)
-    raw_text.to_csv('data/raw_text/b Nov21 500 5.csv')
+    raw_text.to_csv('data/raw_text/b Nov22 500 5.csv')
     frqs={}
     for text_list in all_text:
         tmp=text_list
@@ -194,6 +194,6 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
 
 small_dataset = process_responses(generate_responses("The car brand ","is similar to",[""],500,"345M"), aliases)
 df = pd.DataFrame(small_dataset)
-df.to_csv('data/freqs/b Nov21 500 5.csv')
+df.to_csv('data/freqs/b Nov22 500 5.csv')
 
 
