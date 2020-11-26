@@ -150,20 +150,23 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
     prompt_list
 )
 
-def process_responses(all_text,keywords):
+def process_responses(all_text,keywords,filename):
     raw_text = pd.DataFrame(all_text)
-    raw_text.to_csv('data/raw_text/b Nov22 500 5.csv')
+    raw_text.to_csv('data/raw_text/'+filename+'.csv')
     frqs={}
     for text_list in all_text:
         tmp=text_list
         frq=defaultdict(int)
         text_list=all_text[text_list]
-        for words in keywords:
-            for word in words:
-                regex_string = '[^A-z]' + word + '[^A-z]'
-                frq[words[0]]+=len([text for text in text_list if re.findall(regex_string, text)])
+        for text in text_list:
+            for words in keywords:
+                intext=False
+                for word in words:
+                    if re.findall('[^A-z]' + word + '[^A-z]', text):
+                        intext=True
+                frq[words[0]] += intext
         frqs[tmp]=frq
-    return frqs
+    pd.DataFrame(frqs).to_csv('data/freqs/'+filename+'.csv')
 
 aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Subaru', 'Bugeye', 'Scooby'],
@@ -192,8 +195,6 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Infiniti'],
         ['Volvo']]
 
-small_dataset = process_responses(generate_responses("The car brand ","is similar to",[""],500,"345M"), aliases)
-df = pd.DataFrame(small_dataset)
-df.to_csv('data/freqs/b Nov22 500 5.csv')
+process_responses(generate_responses("The car brand ","is similar to",[""],400,"345M"), aliases, 'b Nov26 400 5')
 
 
