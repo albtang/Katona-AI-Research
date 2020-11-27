@@ -195,6 +195,6 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Infiniti'],
         ['Volvo']]
 
-process_responses(generate_responses("The car brand ","is similar to",[""],400,"345M"), aliases, 'b Nov26 400 5')
+process_responses(generate_responses(""," is similar to",["Mercedes-Benz", 'Nissan'],200,"345M"), aliases, 'b Nov27 200 8')
 
 
