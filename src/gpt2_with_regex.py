@@ -171,15 +171,15 @@ def process_responses(all_text,keywords,filename):
 aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Subaru', 'Bugeye', 'Scooby'],
         ['Dodge', 'Polara'],
-        ['GMC'],
+#        ['GMC'],
         ['Tesla'],
-        ['Buick'],
+#        ['Buick'],
         ['Toyota', 'Yota', 'Camry'],
         ['Honda', 'Accord'],
         ['Nissan', 'Infiniti'],
         ['Chevrolet', 'Chevy'],
         ['Hyundai', 'Tiburon', 'HYU', 'Kia'],
-        ['Ram'],
+#        ['Ram'],
         ['Mazda', 'Matsuda'],
         ['Renault', 'Dacia'],
         ['Lamborghini', 'Lambo', 'Aventadora', 'Lamborgini'],
@@ -190,11 +190,11 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Audi', '4 Rings'],
         ['Volkswagen', 'VW', 'Volkswagon'],
         ['Ferrari', 'Prancing Horse', 'Scuderia'],
-        ['MG', 'M.G.', 'Morris Garages', 'M.G. Car Company'],
+#        ['MG', 'M.G.', 'Morris Garages', 'M.G. Car Company'],
         ['Lexus', 'Lex', 'GX', 'ES 250'],
-        ['Infiniti'],
+#        ['Infiniti'],
         ['Volvo']]
 
-process_responses(generate_responses("The car brand "," is similar to",["Mercedes-Benz", 'Nissan'],200,"345M"), aliases, 'b Nov28 200 8')
+process_responses(generate_responses("The car brand "," is similar to",[i[0] for i in aliases],1,"345M"), aliases, 'Nov28 1 1')
 
 
