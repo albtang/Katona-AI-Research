@@ -1,0 +1,22 @@
+,The car brand Jeep is similar to,The car brand Subaru is similar to,The car brand Dodge is similar to,The car brand Tesla is similar to,The car brand Toyota is similar to,The car brand Honda is similar to,The car brand Nissan is similar to,The car brand Chevrolet is similar to,The car brand Hyundai is similar to,The car brand Mazda is similar to,The car brand Renault is similar to,The car brand Lamborghini is similar to,The car brand Mercedes-Benz is similar to,The car brand BMW is similar to,The car brand Ford is similar to,The car brand Porsche is similar to,The car brand Audi is similar to,The car brand Volkswagen is similar to,The car brand Ferrari is similar to,The car brand Lexus is similar to,The car brand Volvo is similar to
+Jeep,32,0,5,0,0,0,1,3,1,1,0,2,1,0,2,1,0,0,2,1,0
+Subaru,0,38,2,0,0,0,2,0,0,1,0,0,0,0,1,0,0,0,0,0,0
+Dodge,0,0,33,0,0,0,0,3,1,0,0,0,0,0,0,0,0,0,0,0,0
+Tesla,0,0,1,31,3,2,5,5,3,1,1,3,6,5,2,1,5,1,5,7,5
+Toyota,6,12,8,5,34,9,8,5,10,4,3,0,1,1,2,1,0,2,1,6,1
+Honda,1,7,3,0,4,33,8,1,6,0,2,0,0,0,5,2,0,1,0,2,1
+Nissan,1,3,3,0,4,6,36,1,3,0,7,0,1,0,1,0,0,3,2,1,1
+Chevrolet,2,0,7,1,1,0,1,23,1,2,2,0,0,1,1,0,1,1,1,1,0
+Hyundai,1,3,2,0,2,2,2,0,35,1,0,0,1,0,0,0,0,0,1,1,0
+Mazda,0,2,1,0,3,0,2,0,0,35,0,0,0,0,1,0,0,0,1,0,0
+Renault,0,0,0,0,0,0,1,0,0,0,31,0,0,0,1,0,0,0,1,0,0
+Lamborghini,0,0,0,1,0,0,0,1,0,0,0,39,1,0,0,2,0,0,0,1,0
+Mercedes-Benz,4,6,9,7,4,7,4,3,6,3,9,8,29,19,4,5,12,7,13,7,9
+BMW,3,12,10,12,3,11,6,0,5,5,8,5,14,26,8,10,6,7,8,13,8
+Ford,29,10,19,11,13,10,8,28,11,15,4,2,4,9,35,6,4,8,3,6,13
+Porsche,0,1,2,1,2,1,2,1,0,1,5,4,1,4,3,36,4,8,9,3,2
+Audi,0,1,1,0,1,1,2,2,3,0,8,3,2,4,1,6,34,13,2,8,3
+Volkswagen,1,6,4,2,11,4,6,3,6,9,5,3,4,5,7,5,10,29,3,7,3
+Ferrari,1,1,0,3,1,0,0,0,1,0,7,29,4,1,0,5,4,1,29,2,1
+Lexus,0,1,0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,34,0
+Volvo,0,0,1,1,0,0,1,0,0,0,0,0,0,0,2,0,0,1,0,0,29
