@@ -1,0 +1,22 @@
+,Unnamed: 0,The car brand Jeep is similar to,The car brand Subaru is similar to,The car brand Dodge is similar to,The car brand Tesla is similar to,The car brand Toyota is similar to,The car brand Honda is similar to,The car brand Nissan is similar to,The car brand Chevrolet is similar to,The car brand Hyundai is similar to,The car brand Mazda is similar to,The car brand Renault is similar to,The car brand Lamborghini is similar to,The car brand Mercedes-Benz is similar to,The car brand BMW is similar to,The car brand Ford is similar to,The car brand Porsche is similar to,The car brand Audi is similar to,The car brand Volkswagen is similar to,The car brand Ferrari is similar to,The car brand Lexus is similar to,The car brand Volvo is similar to
+0,Jeep,320,8,27,4,5,6,5,17,5,18,8,10,7,2,20,1,5,9,35,5,2
+1,Subaru,11,372,4,0,2,4,8,4,2,2,0,1,1,1,3,0,3,0,0,2,2
+2,Dodge,9,3,320,0,2,0,0,5,1,1,2,0,1,1,5,0,1,0,3,1,0
+3,Tesla,26,10,10,354,31,13,39,60,36,28,27,38,54,33,29,45,37,29,32,37,50
+4,Toyota,58,103,46,35,342,102,79,45,85,66,31,3,20,29,54,13,10,38,20,84,25
+5,Honda,13,52,21,6,46,344,26,18,33,36,18,7,11,11,26,4,6,18,11,35,18
+6,Nissan,11,23,18,21,36,30,350,15,21,24,50,2,7,13,20,5,6,11,11,19,15
+7,Chevrolet,27,8,41,17,13,11,25,250,10,15,15,1,5,7,25,4,14,13,12,7,13
+8,Hyundai,7,13,9,2,11,10,12,1,328,8,6,1,2,2,5,1,1,8,1,9,7
+9,Mazda,3,10,5,0,7,9,2,5,4,336,2,0,5,3,12,2,2,1,3,5,0
+10,Renault,2,2,2,2,7,9,7,1,6,2,314,3,2,2,8,1,2,2,5,3,4
+11,Lamborghini,0,0,2,2,3,0,0,3,0,1,11,371,5,1,0,6,7,3,11,3,0
+12,Mercedes-Benz,28,42,56,51,57,76,54,33,39,57,90,72,274,166,61,65,129,65,129,97,90
+13,BMW,26,80,86,125,53,77,76,21,54,52,81,26,116,324,104,77,137,53,86,128,92
+14,Ford,241,89,192,111,120,71,83,252,141,161,48,39,41,69,352,74,39,106,29,63,154
+15,Porsche,7,13,23,14,16,15,19,14,11,19,40,39,28,36,27,339,66,49,53,28,19
+16,Audi,18,15,12,14,9,15,18,15,21,13,54,18,28,41,18,36,336,71,25,48,15
+17,Volkswagen,27,95,40,41,72,43,85,30,90,63,67,16,35,45,67,45,75,268,28,49,25
+18,Ferrari,15,7,6,13,13,25,16,6,18,8,60,231,31,11,10,61,30,11,310,15,9
+19,Lexus,5,1,3,2,21,5,1,4,7,3,0,0,3,0,3,2,0,2,4,350,0
+20,Volvo,2,2,3,3,2,2,8,2,3,2,1,1,3,5,11,1,4,2,0,8,292
