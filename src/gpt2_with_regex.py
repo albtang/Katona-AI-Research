@@ -195,6 +195,6 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
 #        ['Infiniti'],
         ['Volvo']]
 
-process_responses(generate_responses(""," is similar to",[i[0] for i in aliases],30,"345M"), aliases, 'Dec3 30 15')
+process_responses(generate_responses(""," is similar to",[i[0] for i in aliases],50,"345M"), aliases, 'Dec5 50 15')
 
 
