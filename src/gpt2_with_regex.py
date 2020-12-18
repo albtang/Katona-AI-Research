@@ -144,7 +144,7 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
     nsample,
     1,
     300,
-    0.5,
+    1,
     0,
     '../models',
     prompt_list
@@ -162,7 +162,7 @@ def process_responses(all_text,keywords,filename):
             for words in keywords:
                 intext=False
                 for word in words:
-                    if re.findall('[^A-z]' + word + '[^A-z]', text):
+                    if re.findall('[^A-z]' + word + '[^A-z]', text.split("<|endoftext|>")[0]):
                         intext=True
                 frq[words[0]] += intext
         frqs[tmp]=frq
@@ -195,6 +195,6 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
 #        ['Infiniti'],
         ['Volvo']]
 
-process_responses(generate_responses(""," is similar to",[i[0] for i in aliases],50,"345M"), aliases, 'Dec5 50 15')
+process_responses(generate_responses("The car brand "," is similar to",[],100,"345M"), aliases, 'b Dec16 100 t1 1')
 
 
