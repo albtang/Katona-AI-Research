@@ -1,0 +1,22 @@
+,Jeep is similar to,Subaru is similar to,Dodge is similar to,Tesla is similar to,Toyota is similar to,Honda is similar to,Nissan is similar to,Chevrolet is similar to,Hyundai is similar to,Mazda is similar to,Renault is similar to,Lamborghini is similar to,Mercedes-Benz is similar to,BMW is similar to,Ford is similar to,Porsche is similar to,Audi is similar to,Volkswagen is similar to,Ferrari is similar to,Lexus is similar to,Volvo is similar to
+Jeep,31,0,0,0,1,0,0,1,0,2,0,0,2,1,0,0,0,0,1,0,0
+Subaru,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Dodge,3,0,31,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tesla,0,0,1,37,6,1,3,4,2,1,0,0,0,0,2,0,2,4,1,2,6
+Toyota,1,0,0,0,35,6,18,4,10,9,3,1,3,0,2,1,1,1,2,5,7
+Honda,0,0,1,0,9,39,1,3,2,4,4,3,1,1,3,1,2,0,0,2,3
+Nissan,1,0,0,1,3,2,33,3,2,4,7,0,0,0,2,0,1,2,0,6,1
+Chevrolet,3,0,0,1,3,0,2,29,0,3,2,0,0,0,3,0,0,1,0,0,2
+Hyundai,1,0,0,0,1,1,2,0,34,0,0,0,0,0,0,0,1,0,0,1,1
+Mazda,0,0,0,0,2,0,0,0,1,32,0,0,0,0,2,0,0,0,0,2,0
+Renault,0,0,0,0,0,0,1,0,1,0,24,0,0,2,0,1,0,0,1,0,0
+Lamborghini,0,0,0,0,0,0,0,0,0,0,0,38,0,0,1,0,0,0,1,0,0
+Mercedes-Benz,0,0,2,1,0,2,2,3,0,1,17,2,37,6,1,5,5,0,4,8,1
+BMW,0,0,0,1,0,3,4,1,2,2,4,1,10,36,1,7,16,0,2,14,6
+Ford,4,0,3,1,9,2,9,20,12,10,2,2,2,1,26,3,0,3,1,2,4
+Porsche,0,0,2,0,0,1,0,0,0,0,1,2,2,1,0,30,5,2,3,0,0
+Audi,1,0,0,0,0,0,0,0,1,0,2,0,3,3,0,2,29,5,1,2,1
+Volkswagen,0,0,0,0,6,1,2,1,4,2,2,1,2,1,1,5,7,31,0,0,2
+Ferrari,0,0,0,0,0,1,3,0,1,0,14,11,3,0,2,8,0,0,39,0,0
+Lexus,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,14,0
+Volvo,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,29
