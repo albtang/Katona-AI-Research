@@ -144,8 +144,8 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
     nsample,
     1,
     300,
-    2.0,
-    0,
+    1.0,
+    40,
     '../models',
     prompt_list
 )
@@ -195,6 +195,6 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
 #        ['Infiniti'],
         ['Volvo']]
 
-process_responses(generate_responses("","The car brand is similar to",[""],1000,"345M"), aliases, 'b Jan26 t20 1000')
+process_responses(generate_responses("","The car brand is similar to",[""],1000,"345M"), aliases, 'b Jan28 t10 topk40 1000')
 
 
