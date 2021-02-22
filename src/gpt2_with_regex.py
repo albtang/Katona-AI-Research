@@ -152,7 +152,7 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 
 def process_responses(all_text,keywords,filename):
     raw_text = pd.DataFrame(all_text)
-    raw_text.to_csv('data/raw_text/'+filename+'.csv')
+    raw_text.to_csv('beer_data/raw_text/'+filename+'.csv')
     frqs={}
     for text_list in all_text:
         tmp=text_list
@@ -166,9 +166,9 @@ def process_responses(all_text,keywords,filename):
                         intext=True
                 frq[words[0]] += intext
         frqs[tmp]=frq
-    pd.DataFrame(frqs).to_csv('data/freqs/'+filename+'.csv')
+    pd.DataFrame(frqs).to_csv('beer_data/freqs/'+filename+'.csv')
 
-aliases = [['Jeep', 'Fiat', 'Chrysler'],
+car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Subaru', 'Bugeye', 'Scooby'],
         ['Dodge', 'Polara'],
 #        ['GMC'],
@@ -195,6 +195,35 @@ aliases = [['Jeep', 'Fiat', 'Chrysler'],
 #        ['Infiniti'],
         ['Volvo']]
 
-process_responses(generate_responses(""," is similar to",[i[0] for i in aliases],60,"345M"), aliases, 'Jan5 60 15')
+beer_aliases = [['Red Stripe'],
+        ['Rolling Rock'],
+        ['Bud Light'],
+        ['Coors Light', 'Coors'],
+        ['Sam Adams'],
+        ['Budweiser'],
+        ['Miller Lite'],
+        ['Corona Extra'],
+        ['Heineken'],
+        ['Michelob Ultra'],
+        ['Modelo Especial', 'Modelo'],
+        ['Busch Light'],
+        ['Natural Light', 'Natty Light', 'Natty'],
+        ['Busch'],
+        ['Miller High Life'],
+        ['Keystone Light'],
+        ['Stella Artois'],
+        ['Pabst Blue Ribbon', 'PBR'],
+        ['Bud Ice'],
+        ['Natural Ice'],
+        ['Blue Moon', 'Blue Moon Belgian White'],
+        ['Yeungling Lager'],
+        ['Dos Equis'],
+        ['Steel Reserve'],
+        ['Coors Banquet'],
+        ['Corona Light'],
+        ['Guiness'],
+        ["Milwaukee's Best Ice"]]
+
+process_responses(generate_responses("","The beer brand is similar to",[""],100,"345M"), beer_aliases, 'b Feb22 100 5')
 
 
