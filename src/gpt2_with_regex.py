@@ -159,9 +159,11 @@ def process_responses(all_text,keywords,filename):
         frq=defaultdict(int)
         text_list=all_text[text_list]
         for text in text_list:
+            text = text.lower()
             for words in keywords:
                 intext=False
                 for word in words:
+                    word = word.loser()
                     if re.findall('[^A-z]' + word + '[^A-z]', text.split("<|endoftext|>")[0]):
                         intext=True
                 frq[words[0]] += intext
