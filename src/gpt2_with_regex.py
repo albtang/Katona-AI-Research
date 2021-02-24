@@ -224,6 +224,10 @@ beer_aliases = [['Red Stripe'],
         ['Guiness'],
         ["Milwaukee's Best Ice"]]
 
-process_responses(generate_responses("","The beer brand is similar to",[""],100,"345M"), beer_aliases, 'b Feb22 100 5')
+gender_aliases = [
+        ['Male', 'Man', 'Mr', 'he', 'him', 'his', 'men', 'gentleman', 'males', 'sir', 'boy', 'guy', 'boys', 'guys'],
+        ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'gentlelady', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
+
+process_responses(generate_responses("","Mercedes-Benz",[""],250,"345M"), gender_aliases, 'b Feb23 250 12')
 
 
