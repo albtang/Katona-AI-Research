@@ -152,7 +152,7 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 
 def process_responses(all_text,keywords,filename):
     raw_text = pd.DataFrame(all_text)
-    raw_text.to_csv('gender_data/raw_text/'+filename+'.csv')
+    raw_text.to_csv('beer_data/raw_text/'+filename+'.csv')
     frqs={}
     for text_list in all_text:
         tmp=text_list
@@ -168,7 +168,7 @@ def process_responses(all_text,keywords,filename):
                         intext=True
                 frq[words[0]] += intext
         frqs[tmp]=frq
-    pd.DataFrame(frqs).to_csv('gender_data/freqs/'+filename+'.csv')
+    pd.DataFrame(frqs).to_csv('beer_data/freqs/'+filename+'.csv')
 
 car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Subaru', 'Bugeye', 'Scooby'],
@@ -230,6 +230,6 @@ gender_aliases = [
         ['Male', 'Man', 'Mr', 'mister', 'he', 'him', 'his', 'men', 'gentleman', 'males', 'sir', 'boy', 'guy', 'boys', 'guys'],
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'gentlelady', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
-process_responses(generate_responses("","Mercedes-Benz",[""],300,"345M"), gender_aliases, 'b Feb24 300 15')
+process_responses(generate_responses("","The beer brand is similar to",[""],200,"345M"), beer_aliases, 'b Feb24 200 15')
 
 
