@@ -2,3 +2,4 @@ __pycache__
 .mypy_cache/
 models/
 .ipynb_checkpoints
+.DS_Store

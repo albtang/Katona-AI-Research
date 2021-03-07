@@ -151,23 +151,17 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 )
 
 def process_responses(all_text,keywords,filename):
-    raw_text = pd.DataFrame(all_text)
-    raw_text.to_csv('gender_data/raw_text/'+filename+'.csv')
-    frqs={}
-    for text_list in all_text:
-        tmp=text_list
-        frq=defaultdict(int)
-        text_list=all_text[text_list]
-        for text in text_list:
-            text = text.lower()
-            for words in keywords:
-                intext=False
-                for word in words:
-                    word = word.lower()
-                    if re.findall('[^A-z]' + word + '[^A-z]', text.split("<|endoftext|>")[0]):
-                        intext=True
-                frq[words[0]] += intext
-        frqs[tmp]=frq
+    all_text = pd.DataFrame(all_text)
+    all_text.to_csv('gender_data/raw_text/'+filename+'.csv')
+    frqs = {}
+    for prompt in all_text.columns:
+        frqs[prompt] = {}
+        series = all_text[prompt].str.split("<|endoftext|>", expand=True)[0]
+        for brand in keywords:
+            cnt = pd.Series(np.zeros_like(series))
+            for alias in brand:
+                cnt = cnt | series.str.contains('[^A-z]' + alias + '[^A-z]', case=False)
+            frqs[prompt][brand[0]] = cnt.sum()
     pd.DataFrame(frqs).to_csv('gender_data/freqs/'+filename+'.csv')
 
 car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
