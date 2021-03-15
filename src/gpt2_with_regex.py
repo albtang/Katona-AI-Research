@@ -156,10 +156,11 @@ def process_responses(all_text,keywords,filename):
     frqs = {}
     for prompt in all_text.columns:
         frqs[prompt] = {}
-        series = all_text[prompt].str.split("<|endoftext|>", expand=True)[0]
+        series = all_text[prompt].str.lower().str.split("<|endoftext|>", expand=True)[0]
         for brand in keywords:
             cnt = pd.Series(np.zeros_like(series))
             for alias in brand:
+                alias = alias.lower()
                 cnt = cnt | series.str.contains('[^A-z]' + alias + '[^A-z]', case=False)
             frqs[prompt][brand[0]] = cnt.sum()
     pd.DataFrame(frqs).to_csv('gender_data/freqs/'+filename+'.csv')
@@ -224,6 +225,6 @@ gender_aliases = [
         ['Male', 'Man', 'Mr', 'mister', 'he', 'him', 'his', 'men', 'gentleman', 'gentlemen', 'males', 'sir', 'boy', 'guy', 'boys', 'guys'],
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'ladies', 'gentlelady', 'gentleladies', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
-process_responses(generate_responses(""," think Mercedes-Benz is similar to",gender_aliases[0]+gender_aliases[1],100,"345M"), gender_aliases, 'b Feb26 100 10')
+process_responses(generate_responses(""," think Mercedes-Benz is similar to",gender_aliases[0]+gender_aliases[1],100,"345M"), car_aliases, 'b Mar11 100 10')
 
 
