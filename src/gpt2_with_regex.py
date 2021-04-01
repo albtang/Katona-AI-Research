@@ -152,18 +152,17 @@ def generate_responses(bgn_prompt,end_prompt, brand_list, nsample,model_size):
 
 def process_responses(all_text,keywords,filename):
     all_text = pd.DataFrame(all_text)
-    all_text.to_csv('gender_data/raw_text/'+filename+'.csv')
+    all_text.to_csv('beer_data/raw_text/'+filename+'.csv')
     frqs = {}
     for prompt in all_text.columns:
         frqs[prompt] = {}
-        series = all_text[prompt].str.lower().str.split("<|endoftext|>", expand=True)[0]
+        series = all_text[prompt].str.split("<|endoftext|>", expand=True)[0]
         for brand in keywords:
             cnt = pd.Series(np.zeros_like(series))
             for alias in brand:
-                alias = alias.lower()
-                cnt = cnt | series.str.contains('[^A-z]' + alias + '[^A-z]', case=False)
+                cnt = cnt | series.str.contains('\\b' + alias + '(?:[^A-z]|\\b)', case=False)
             frqs[prompt][brand[0]] = cnt.sum()
-    pd.DataFrame(frqs).to_csv('gender_data/freqs/'+filename+'.csv')
+    pd.DataFrame(frqs).to_csv('beer_data/freqs/'+filename+'.csv')
 
 car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Subaru', 'Bugeye', 'Scooby'],
@@ -192,39 +191,43 @@ car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
 #        ['Infiniti'],
         ['Volvo']]
 
-beer_aliases = [['Red Stripe'],
-        ['Rolling Rock'],
-        ['Bud Light'],
-        ['Coors Light', 'Coors'],
-        ['Sam Adams'],
-        ['Budweiser'],
-        ['Miller Lite'],
-        ['Corona Extra'],
-        ['Heineken'],
-        ['Michelob Ultra'],
-        ['Modelo Especial', 'Modelo'],
-        ['Busch Light'],
-        ['Natural Light', 'Natty Light', 'Natty'],
-        ['Busch'],
-        ['Miller High Life'],
-        ['Keystone Light'],
-        ['Stella Artois'],
-        ['Pabst Blue Ribbon', 'PBR'],
-        ['Bud Ice'],
-        ['Natural Ice'],
-        ['Blue Moon', 'Blue Moon Belgian White'],
-        ['Yeungling Lager'],
-        ['Dos Equis'],
-        ['Steel Reserve'],
-        ['Coors Banquet'],
-        ['Corona Light'],
-        ['Guiness'],
-        ["Milwaukee's Best Ice"]]
+beer_aliases = [
+    ["Blue Moon"],
+    ["Bud Light"],
+    ["Budweiser"],
+    ["Busch"],
+    ["Coors"],
+    ["Coors Light"],
+    ["Corona"],
+    ["Corona Extra"],
+    ["Goose Island"],
+    ["Hefeweizen"],
+    ["Heineken"],
+    ["Hopworks"],
+    ["Kirin"],
+    ["Kolsch"],
+    ["Lagunitas Brewing", "Lagunitas"],
+    ["Miller Lite"],
+    ["MillerCoors"],
+    ["New Belgium Brewing"],
+    ["Pabst"],
+    ["Pabst Blue Ribbon", "PBR"],
+    ["Pacific Northwest"],
+    ["Pilsner Urquell"],
+    ["Samuel Adams", "Sam Adams"],
+    ["Sierra Nevada"],
+    ["Sierra Nevada Brewing"],
+    ["Sierra Nevada Pale Ale"],
+    ["Stella Artois"],
+    ["Stone Brewing", "Stone"],
+    ["Golden Road"],
+    ["Kona"]]
+
 
 gender_aliases = [
         ['Male', 'Man', 'Mr', 'mister', 'he', 'him', 'his', 'men', 'gentleman', 'gentlemen', 'males', 'sir', 'boy', 'guy', 'boys', 'guys'],
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'ladies', 'gentlelady', 'gentleladies', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
-process_responses(generate_responses(""," think Mercedes-Benz is similar to",gender_aliases[0]+gender_aliases[1],100,"345M"), car_aliases, 'b Mar11 100 10')
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],100,"345M"), beer_aliases, 'Apr1 50 1')
 
 
