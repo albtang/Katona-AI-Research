@@ -228,6 +228,6 @@ gender_aliases = [
         ['Male', 'Man', 'Mr', 'mister', 'he', 'him', 'his', 'men', 'gentleman', 'gentlemen', 'males', 'sir', 'boy', 'guy', 'boys', 'guys'],
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'ladies', 'gentlelady', 'gentleladies', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
-process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr1 50 15')
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr6 50 15')
 
 
