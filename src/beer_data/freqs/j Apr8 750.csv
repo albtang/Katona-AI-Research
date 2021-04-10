@@ -1,0 +1,31 @@
+Brands,Blue Moon is similar to,Bud Light is similar to,Budweiser is similar to,Busch is similar to,Coors is similar to,Coors Light is similar to,Corona is similar to,Corona Extra is similar to,Goose Island is similar to,Hefeweizen is similar to,Heineken is similar to,Hopworks is similar to,Kirin is similar to,Kolsch is similar to,Lagunitas Brewing is similar to,Miller Lite is similar to,MillerCoors is similar to,New Belgium Brewing is similar to,Pabst is similar to,Pabst Blue Ribbon is similar to,Pacific Northwest is similar to,Pilsner Urquell is similar to,Samuel Adams is similar to,Sierra Nevada is similar to,Sierra Nevada Brewing is similar to,Sierra Nevada Pale Ale is similar to,Stella Artois is similar to,Stone Brewing is similar to,Golden Road is similar to,Kona is similar to
+Blue Moon,28,5,2,0,4,4,0,0,1,0,3,0,0,2,6,2,7,13,11,3,0,0,0,1,4,1,0,5,0,0
+Bud Light,0,710,223,6,61,40,0,0,0,4,19,1,0,2,1,7,54,2,56,56,0,1,0,0,0,0,0,5,0,0
+Budweiser,0,23,690,31,69,10,0,0,0,21,84,0,0,8,8,2,54,11,166,80,0,4,0,1,2,3,0,11,0,0
+Busch,0,7,21,10,45,8,0,0,0,1,36,0,0,1,11,0,63,5,63,10,0,0,0,2,6,1,0,5,0,0
+Coors,0,1,25,6,167,81,0,0,0,1,20,0,0,2,8,1,213,16,33,14,0,2,0,1,10,1,0,14,0,0
+Coors Light,0,1,19,2,123,81,0,0,0,1,12,0,0,1,4,1,137,10,20,13,0,2,0,1,9,1,0,11,0,0
+Corona,3,5,9,3,14,3,123,681,0,1,10,1,0,0,0,0,13,0,36,8,0,0,0,1,0,0,0,0,0,0
+Corona Extra,0,0,3,0,0,0,0,678,0,0,1,1,0,0,0,0,0,0,7,1,0,0,0,0,0,0,0,0,0,0
+Goose Island,0,2,1,1,4,3,0,0,121,0,3,0,0,3,4,0,4,3,10,0,0,0,0,0,4,1,0,4,0,0
+Hefeweizen,0,0,2,5,1,1,0,0,0,267,0,0,0,3,0,1,0,1,1,1,0,3,0,0,0,2,0,2,0,0
+Heineken,0,0,9,6,1,0,0,0,0,4,73,0,0,2,3,0,3,3,13,2,0,1,1,0,0,1,0,1,0,0
+Hopworks,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Kirin,0,1,0,0,0,0,0,0,0,0,1,0,246,0,0,0,1,0,4,0,0,0,0,1,1,0,0,0,0,0
+Kolsch,0,2,1,0,0,3,0,0,0,4,0,0,0,302,0,0,0,1,2,0,0,1,0,0,3,3,0,3,0,0
+Lagunitas Brewing,0,0,0,1,0,2,0,1,0,2,1,0,0,1,661,1,2,3,6,1,0,1,0,0,1,8,0,2,0,0
+Miller Lite,0,4,11,4,16,7,0,0,0,2,5,0,0,0,0,8,37,0,8,4,0,2,0,0,0,1,0,1,0,0
+MillerCoors,0,4,21,7,49,14,0,0,0,2,12,0,0,2,3,0,183,1,29,5,0,1,0,1,2,4,0,5,0,0
+New Belgium Brewing,0,0,1,0,2,1,0,0,0,0,0,0,0,0,2,0,0,33,1,0,0,1,0,0,1,2,0,0,0,0
+Pabst,0,1,4,2,8,6,0,0,0,1,4,0,0,2,3,0,2,3,547,266,0,0,0,0,1,2,0,1,0,0
+Pabst Blue Ribbon,0,1,2,2,3,3,0,0,0,0,4,0,0,1,2,0,1,1,103,256,0,0,0,0,0,2,0,1,0,0
+Pacific Northwest,1,2,1,1,0,0,0,0,11,0,2,1,0,0,20,1,1,4,3,3,274,0,0,10,27,8,0,5,0,26
+Pilsner Urquell,0,1,1,0,5,4,0,0,0,8,3,0,0,2,1,0,0,2,1,0,0,669,0,1,0,5,0,1,0,0
+Samuel Adams,0,1,3,0,0,1,0,0,0,0,2,0,0,1,1,0,3,3,5,1,0,0,128,1,1,1,0,2,0,0
+Sierra Nevada,0,2,1,1,4,4,0,0,1,4,3,0,0,3,25,0,7,21,18,4,1,8,1,567,711,689,0,12,0,0
+Sierra Nevada Brewing,0,0,0,0,2,2,0,0,0,1,0,0,0,1,6,0,1,5,2,2,0,1,0,38,590,74,0,4,0,0
+Sierra Nevada Pale Ale,0,0,0,0,0,1,0,0,0,1,0,0,0,0,4,0,0,4,4,0,0,3,0,16,73,671,0,1,0,0
+Stella Artois,0,0,4,2,14,2,0,0,0,2,18,0,0,2,0,0,9,0,27,8,0,0,0,0,0,0,106,0,0,0
+Stone Brewing,19,1,1,1,3,4,2,1,3,2,2,0,6,0,23,0,1,15,5,2,0,0,2,2,5,6,4,26,3,1
+Golden Road,0,0,1,0,0,0,0,0,0,0,0,0,0,1,3,0,0,1,0,0,0,0,0,0,7,7,0,3,26,0
+Kona,0,0,1,0,2,0,0,1,5,2,1,0,0,0,1,1,0,2,2,0,0,0,0,1,2,0,0,2,0,470
