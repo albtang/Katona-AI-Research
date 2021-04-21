@@ -6,6 +6,7 @@ import model, sample, encoder
 import pandas as pd
 from collections import defaultdict
 import re
+import time
 
 #interactive mode: input prompt and test out the AI.
 #non-interactive mode: use a list of prompts to generate a large number of responses to each prompt.
@@ -102,6 +103,9 @@ def noninteract_model(
     elif length > hparams.n_ctx:
         raise ValueError("Can't get samples longer than window size: %s" % hparams.n_ctx)
 
+    #session_conf = tf.ConfigProto(
+    #        intra_op_parallelism_threads=1,
+    #        inter_op_parallelism_threads=1)
     with tf.Session(graph=tf.Graph()) as sess:
         context = tf.placeholder(tf.int32, [batch_size, None])
         np.random.seed(seed)
@@ -228,6 +232,8 @@ gender_aliases = [
         ['Male', 'Man', 'Mr', 'mister', 'he', 'him', 'his', 'men', 'gentleman', 'gentlemen', 'males', 'sir', 'boy', 'guy', 'boys', 'guys'],
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'ladies', 'gentlelady', 'gentleladies', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
-process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr18 50 15')
+t = time.time()
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr21 50 15')
+print("Elapsed time:", time.time() - t)
 
 
