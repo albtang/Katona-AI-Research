@@ -103,10 +103,10 @@ def noninteract_model(
     elif length > hparams.n_ctx:
         raise ValueError("Can't get samples longer than window size: %s" % hparams.n_ctx)
 
-    #session_conf = tf.ConfigProto(
-    #        intra_op_parallelism_threads=1,
-    #        inter_op_parallelism_threads=1)
-    with tf.Session(graph=tf.Graph()) as sess:
+    session_conf = tf.ConfigProto(
+            intra_op_parallelism_threads=1,
+            inter_op_parallelism_threads=1)
+    with tf.Session(graph=tf.Graph(), config=session_conf) as sess:
         context = tf.placeholder(tf.int32, [batch_size, None])
         np.random.seed(seed)
         tf.set_random_seed(seed)
