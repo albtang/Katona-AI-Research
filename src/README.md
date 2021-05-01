@@ -32,7 +32,19 @@ When running baseline samples, i.e. when not including a brand in the prompt and
 
 ### `process_responses()`
 
-TODO
+Function parameters:
+- `all_text`: Dictionary from `generate_responses` or equivalent that can be made into a DataFrame
+- `keywords`: List of lists of Strings
+- `filename`: String
+
+*Note: This function hard codes what folder (e.g. `beer_data`) to save data to in two locations.*
+
+This function creates a DataFrame out of `all_text` and then parses it for each brand alias in `keywords`. It then saves the raw text and frequency CSVs under the `filename`.
+
+This usually takes the return value of `generate_responses`. An example usage is:
+```
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr23 50 15')
+```
 
 ## Using screen to run concurrent samples
 TODO
