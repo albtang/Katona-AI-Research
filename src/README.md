@@ -1,5 +1,5 @@
 # Generating data with GPT-2
-Currently, text generation is performed by running `gpt2_with_regex.py`. `gpt2_working_version_9_20_peiyao.py` was the starting point, before it became deprecated when we switched to a regex approach to counting the frequency of words. `gpt2_params_change.py` is largely the same as `gpt2_with_regex.py` with the exception being the hyperparameters (e.g. top_k, temperature) may be modified. It also does not have the latest parsing algorithm, which may result in slightly skewed frequency counts. If you intend to experiment with hyperparameters in the future, make sure to copy the new parsing algorithm from `process_responses()` in `gpt2_with_regex.py`.
+Currently, text generation is performed by running `gpt2_with_regex.py`. `gpt2_working_version_9_20_peiyao.py` was the starting point, before it became deprecated when we switched to a regex approach to count the frequency of words. `gpt2_params_change.py` is largely the same as `gpt2_with_regex.py` with the exception being the hyperparameters (e.g. top_k, temperature) may be modified. It also does not have the latest parsing algorithm, which may result in slightly skewed frequency counts. If you intend to experiment with hyperparameters in the future, make sure to copy the new parsing algorithm from `process_responses()` in `gpt2_with_regex.py`.
 
 Most of the time, you'll only need to change the sequence number on the file name on the last line of the file when generating a batch. Below, I'll be breaking down the important bits of `gpt2_with_regex.py`.
 
@@ -26,13 +26,25 @@ Returns:
 
 Each prompt is then added together as `bgn_prompt + brand + end_prompt`, where `brand` is each element of `brand_list`. Each prompt is run for `nsample` times.
 
-For example, if I wanted generate 10 samples from the prompt "The car brand Mercedes-Benz is similar to", I would use `generate_responses("The car brand ", " is similar to", ["Mercedes-Benz"], 10, "345M")`. If I wanted generate 10 samples from the prompt "Mercedes-Benz is similar to", I would use `generate_responses("", " is similar to", ["Mercedes-Benz"], 10, "345M")`.
+For example, if I wanted to generate 10 samples from the prompt "The car brand Mercedes-Benz is similar to", I would use `generate_responses("The car brand ", " is similar to", ["Mercedes-Benz"], 10, "345M")`. If I wanted to generate 10 samples from the prompt "Mercedes-Benz is similar to", I would use `generate_responses("", " is similar to", ["Mercedes-Benz"], 10, "345M")`.
 
 When running baseline samples, i.e. when not including a brand in the prompt and just the category, `brand_list` should be `[""]`. Using `[]` will result in no prompt being generated, and thus no samples collected. An example usage would be `generate_responses("The car brand", " is similar to", [""], 10, "345M")`.
 
 ### `process_responses()`
 
-TODO
+Function parameters:
+- `all_text`: Dictionary from `generate_responses` or equivalent that can be made into a DataFrame
+- `keywords`: List of lists of Strings
+- `filename`: String
+
+*Note: This function hard codes what folder (e.g. `beer_data`) to save data to in two locations.*
+
+This function creates a DataFrame out of `all_text` and then parses it for each brand alias in `keywords`. It then saves the raw text and frequency CSVs under the `filename`.
+
+This usually takes the return value of `generate_responses`. An example usage is:
+```
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr23 50 15')
+```
 
 ## Using screen to run concurrent samples
 TODO
