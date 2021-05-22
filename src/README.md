@@ -46,7 +46,19 @@ This usually takes the return value of `generate_responses`. An example usage is
 process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr23 50 15')
 ```
 
-## Using screen to run concurrent samples
-TODO
+## Using _screen_ to run concurrent samples
+Running multiple scripts on the same server requires multiple terminals. We could use multiple SSH sessions, but it's simpler to use _screen_ to accomplish the same thing.
+
+Everything I know is from: https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/ Here are the important commands:
+- `screen -ls` - Lists the named screens.
+- `screen -S {name}` - Creates a saved _screen_ under the name.
+- `screen -r {name}` - Resumes a saved _screen_ under the name.
+- `Ctrl+A`, then `D` - Detaches from a _screen_.
+
+What I typically do is login via SSH. I run `git pull` in the repo directory to pull any changes. Then I access the _screens_ via `screen -r sim1`, change the output filenames in the python file via _vim_ (`vim gpt2_with_regex.py`), and then run the script via `python gpt2_with_regex.py`. Then detach via `Ctrl+A`, then `D`, and then repeat on the next screen.
 ## Vim Tricks
 TODO
+
+## Further Improvements
+- Refactor `gpt2_with_regex.py` so that you can specify the output folder and filenames via the command line.
+- Centralize the merger and parser notebooks instead of having them distributed across the individual data folders.
