@@ -60,5 +60,5 @@ What I typically do is login via SSH. I run `git pull` in the repo directory to 
 TODO
 
 ## Further Improvements
-- Refactor `gpt2_with_regex.py` so that you can specify the output folder and filenames via the command line.
+- Refactor `gpt2_with_regex.py` so that you can specify the output folder and filenames via the command line. Alternatively, have them in one location in the file that you can edit in one go.
 - Centralize the merger and parser notebooks instead of having them distributed across the individual data folders.
