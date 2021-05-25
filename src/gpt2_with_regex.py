@@ -196,36 +196,25 @@ car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Volvo']]
 
 beer_aliases = [
-    ["Blue Moon"],
-    ["Bud Light"],
-    ["Budweiser"],
-    ["Busch"],
-    ["Coors"],
-    ["Coors Light"],
-    ["Corona"],
-    ["Corona Extra"],
-    ["Goose Island"],
-    ["Hefeweizen"],
-    ["Heineken"],
-    ["Hopworks"],
-    ["Kirin"],
-    ["Kolsch"],
-    ["Lagunitas Brewing", "Lagunitas"],
-    ["Miller Lite"],
-    ["MillerCoors"],
-    ["New Belgium Brewing"],
-    ["Pabst"],
-    ["Pabst Blue Ribbon", "PBR"],
-    ["Pacific Northwest"],
-    ["Pilsner Urquell"],
-    ["Samuel Adams", "Sam Adams"],
-    ["Sierra Nevada"],
-    ["Sierra Nevada Brewing"],
-    ["Sierra Nevada Pale Ale"],
-    ["Stella Artois"],
-    ["Stone Brewing", "Stone"],
-    ["Golden Road"],
-    ["Kona"]]
+#     ["Bud Light", "budlight"],
+#     ["Coors Light", "coors"],
+#     ["Budweiser", "bud", "budwiser"],
+#     ["Corona Extra", "corona"],
+    ["Guinness"],
+#     ["Heineken", "heineken light"],
+#     ["Stella Artois"],
+#     ["Blue Moon"],
+#     ["Pabst Blue Ribbon", "PBR"],
+    ["Miller High Life"],
+#     ["Samuel Adams", "Sam Adams"],
+    ["Dos Equis"],
+    ["Michelob Ultra", "michelob light"],
+    ["Rolling Rock"],
+    ["Red Stripe"]
+#     ["Miller Lite"],
+#     ["Pilsner Urquell", "pilsner"],
+#     ["Sierra Nevada Brewing", "Sierra Nevada"]
+]
 
 
 gender_aliases = [
@@ -233,7 +222,7 @@ gender_aliases = [
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'ladies', 'gentlelady', 'gentleladies', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
 t = time.time()
-process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Apr23 50 15')
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],450,"345M"), beer_aliases, 'May 25 450 1')
 print("Elapsed time:", time.time() - t)
 
 
