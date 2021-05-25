@@ -222,7 +222,7 @@ gender_aliases = [
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'ladies', 'gentlelady', 'gentleladies', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
 t = time.time()
-process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],450,"345M"), beer_aliases, 'May 25 450 1')
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],450,"345M"), beer_aliases, 'May25 450 1')
 print("Elapsed time:", time.time() - t)
 
 
