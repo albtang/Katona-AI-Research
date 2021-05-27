@@ -57,7 +57,13 @@ Everything I know is from: https://www.howtogeek.com/662422/how-to-use-linuxs-sc
 
 What I typically do is login via SSH. I run `git pull` in the repo directory to pull any changes. Then I access the _screens_ via `screen -r sim1`, change the output filenames in the python file via _vim_ (`vim gpt2_with_regex.py`), and then run the script via `python gpt2_with_regex.py`. Then detach via `Ctrl+A`, then `D`, and then repeat on the next screen.
 ## Vim Tricks
-TODO
+Vim is an inline code editor, necessary for editing files while SSH'd in. It has a lot of features I've never used, but here are the basics:
+- Use `vim {file}` to run vim on that file.
+- Once you're in, you're able to use the arrows to navigate.
+- `i` sets you into insert mode, so you'll be able to delete and insert text.
+- Once you're done editing, press `esc` to exit insert mode.
+- To save and exit, type `:wq`. Make sure you are no longer in insert mode.
+- If you want to exit, type `:q`. If there are changes, it'll warn you. You can exit without saving via `:q!`.
 
 ## Further Improvements
 - Refactor `gpt2_with_regex.py` so that you can specify the output folder and filenames via the command line. Alternatively, have them in one location in the file that you can edit in one go.
