@@ -4,7 +4,7 @@ Currently, text generation is performed by running `gpt2_with_regex.py`. `gpt2_w
 Most of the time, you'll only need to change the sequence number on the file name on the last line of the file when generating a batch. Below, I'll be breaking down the important bits of `gpt2_with_regex.py`.
 
 ### Aliases
-We format aliases as a list of lists. Each brand occupies its own list, with the brand name first and its alises following it. For example, here's a sample of the `car_aliases`:
+We format aliases as a list of lists. Each brand occupies its own list, with the brand name first and its aliases following it. For example, here's a sample of the `car_aliases`:
 ```
 car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Subaru', 'Bugeye', 'Scooby'],
