@@ -61,6 +61,7 @@ Vim is an inline code editor, necessary for editing files while SSH'd in. It has
 - Use `vim {file}` to run vim on that file.
 - Once you're in, you're able to use the arrows to navigate.
 - `i` sets you into insert mode, so you'll be able to delete and insert text.
+- `r` followed by a letter will replace the letter in front of the cursor with the typed letter. This is best used for modifying the sequence number when running multiple things at once.
 - Once you're done editing, press `esc` to exit insert mode.
 - To save and exit, type `:wq`. Make sure you are no longer in insert mode.
 - If you want to exit, type `:q`. If there are changes, it'll warn you. You can exit without saving via `:q!`.
