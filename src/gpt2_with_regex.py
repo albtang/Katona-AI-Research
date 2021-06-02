@@ -196,24 +196,24 @@ car_aliases = [['Jeep', 'Fiat', 'Chrysler'],
         ['Volvo']]
 
 beer_aliases = [
-#     ["Bud Light", "budlight"],
-#     ["Coors Light", "coors"],
-#     ["Budweiser", "bud", "budwiser"],
-#     ["Corona Extra", "corona"],
+     ["Bud Light", "budlight"],
+     ["Coors Light", "coors"],
+     ["Budweiser", "bud", "budwiser"],
+     ["Corona Extra", "corona"],
     ["Guinness"],
-#     ["Heineken", "heineken light"],
-#     ["Stella Artois"],
-#     ["Blue Moon"],
-#     ["Pabst Blue Ribbon", "PBR"],
+     ["Heineken", "heineken light"],
+     ["Stella Artois"],
+     ["Blue Moon"],
+     ["Pabst Blue Ribbon", "PBR"],
     ["Miller High Life"],
-#     ["Samuel Adams", "Sam Adams"],
+     ["Samuel Adams", "Sam Adams"],
     ["Dos Equis"],
     ["Michelob Ultra", "michelob light"],
     ["Rolling Rock"],
-    ["Red Stripe"]
-#     ["Miller Lite"],
-#     ["Pilsner Urquell", "pilsner"],
-#     ["Sierra Nevada Brewing", "Sierra Nevada"]
+    ["Red Stripe"],
+     ["Miller Lite"],
+     ["Pilsner Urquell", "pilsner"],
+     ["Sierra Nevada Brewing", "Sierra Nevada"]
 ]
 
 
@@ -222,7 +222,7 @@ gender_aliases = [
         ['Female', 'Woman', 'Mrs', 'Ms', 'she', 'her', 'hers', 'women', 'lady', 'ladies', 'gentlelady', 'gentleladies', 'females', "ma'am", 'madam', 'girl', 'gal', 'girls', 'gals']]
 
 t = time.time()
-process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],270,"345M"), beer_aliases, 'May25 270 21')
+process_responses(generate_responses(""," is similar to",[i[0] for i in beer_aliases],50,"345M"), beer_aliases, 'Jun2 50 2')
 print("Elapsed time:", time.time() - t)
 
 
